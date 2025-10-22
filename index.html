@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Hng Internship Stage O project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=TASA+Orbiter:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main data-testid="test-profile-card">
+      <section class="user-description">
+        <img
+          data-testid="test-user-avatar"
+          src="./my img.jpg"
+          alt="user-image"
+        />
+        <div>
+          <p class="user-name" data-testid="test-user-name">Taiwo Hungbeme</p>
+          <p class="user-bio" data-testid="test-user-bio">
+            A passionate frontend developer dedicated to crafting clean,
+            responsive, and accessible user interfaces. Loves turning creative
+            ideas into interactive digital experiences.
+          </p>
+
+          <p class="time" data-testid="test-user-time">
+            Time : <span class="current-time"></span>
+          </p>
+        </div>
+      </section>
+
+      <section class="hobbies-dislikes">
+        <section class="hobbies">
+          <p class="headline">Hobbies</p>
+          <ul data-testid="test-user-hobbies" class="user-hobbies">
+            <li>Building web projects</li>
+            <li>Learning new technologies</li>
+            <li>Reading novels</li>
+            <li>Listening to music</li>
+          </ul>
+        </section>
+
+        <section class="dislikes">
+          <p class="headline">Dislikes</p>
+          <ul data-testid="test-user-dislikes" class="user-dislikes">
+            <li>Slow websites</li>
+            <li>Unclear documentation</li>
+            <li>Washing plates</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="socials" data-testid="test-user-social-links">
+        <a
+          href="https://github.com/hungbeme"
+          aria-label="link to my github"
+          data-testid="test-user-social-github"
+          target="_blank"
+          ><ion-icon class="contact-icon" name="logo-github"></ion-icon>
+          Github</a
+        >
+
+        <a
+          href="https://www.linkedin.com/in/taiwo-hungbeme"
+          data-testid="test-user-social-linkedin"
+          aria-label="link to my linkedin"
+          target="_blank"
+        >
+          <ion-icon class="contact-icon" name="logo-linkedin"></ion-icon>
+          LinkedIn
+        </a>
+
+        <a
+          aria-label="link to my X account"
+          href="https://x.com/hungbeme"
+          data-testid="test-user-social-x"
+          target="_blank"
+        >
+          <ion-icon class="contact-icon" name="logo-twitter"></ion-icon>
+          X
+        </a>
+
+        <a
+          href="https://wa.me/message/7KWPRC53ZKSSG1"
+          data-testid="test-user-social-whatsapp"
+          target="_blank"
+          aria-label="link to my whatsapp "
+          ><ion-icon class="contact-icon" name="logo-whatsapp"></ion-icon
+          >Whatsapp
+        </a>
+
+        <a
+          href="mailto:hungbemetaiwosamuel@gmail.com"
+          data-testid="test-user-social-email"
+          target="_blank"
+          aria-label="link to my mail"
+          ><ion-icon class="contact-icon" name="mail-outline"></ion-icon>Email
+        </a>
+
+        <a
+          href="tel:09137746866"
+          data-testid="test-user-social-phone"
+          target="_blank"
+          aria-label="link to my phone number "
+          ><ion-icon class="contact-icon" name="call-outline"></ion-icon>Phone
+        </a>
+      </section>
+    </main>
+
+    <!-- 👤 Profile Info Name: Bio:. Avatar: (Use your photo or a placeholder — e.g.
+    https://i.pravatar.cc/150?img=12) Current Time: (Will be rendered
+    dynamically with Date.now()) --- 🌐 Social Links --- 🎮 Hobbies -->
+
+    <script>
+      const timeEl = document.querySelector(".current-time");
+
+      setInterval(() => {
+        timeEl.textContent = Date.now();
+        // timeEl.textContent = new Date();
+      }, 1000);
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
